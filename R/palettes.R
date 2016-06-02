@@ -31,7 +31,7 @@ mcri.palettes <- list(
 mcriPalette <- function(name, n, type = c("discrete", "continuous")) {
     type <- match.arg(type)
 
-    pal <- mcriPalettes[[name]]
+    pal <- mcri.palettes[[name]]
     if (is.null(pal))
         stop("Palette not found.")
 
