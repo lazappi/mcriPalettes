@@ -1,0 +1,48 @@
+---
+title: "README"
+output:
+  html_document:
+    keep_md: true
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  fig.path = "figure/",
+  fig.height = 1
+)
+```
+
+# MCRI Palettes
+
+Colour palettes based on the MCRI branding.
+
+## Installation
+
+```R
+devtools::install_github("lazappi/mcriPalettes")
+```
+
+## Usage
+
+```{r, palettes_dummy}
+library("mcriPalettes")
+
+# See all palettes
+names(mcri.palettes)
+```
+
+### MCRI
+
+```{r, MCRI, fig.height = 3}
+library("ggplot2")
+
+mcriPalette("MCRI")
+
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + 
+  geom_point(size = 3) + 
+  scale_color_manual(values = mcriPalette("MCRI")) + 
+  theme_gray()
+```
