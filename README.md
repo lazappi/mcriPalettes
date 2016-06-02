@@ -1,20 +1,21 @@
-# README
+# MCRI Palettes
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 
 
-# MCRI Palettes
-
 Colour palettes based on the MCRI branding.
 
-## Installation
+Most of the code is taken from [Karthik Ram's `wesanderson` 
+palette](https://github.com/karthik/wesanderson)
+
+# Installation
 
 ```R
 devtools::install_github("lazappi/mcriPalettes")
 ```
 
-## Usage
+# Usage
 
 
 ```r
@@ -25,7 +26,9 @@ names(mcri.palettes)
 ## [1] "MCRI"
 ```
 
-### MCRI
+# Palettes
+
+## MCRI
 
 
 ```r

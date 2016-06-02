@@ -1,5 +1,5 @@
 ---
-title: "README"
+title: "MCRI Palettes"
 output:
   html_document:
     keep_md: true
@@ -15,17 +15,18 @@ knitr::opts_chunk$set(
 )
 ```
 
-# MCRI Palettes
-
 Colour palettes based on the MCRI branding.
 
-## Installation
+Most of the code is taken from [Karthik Ram's `wesanderson` 
+palette](https://github.com/karthik/wesanderson)
+
+# Installation
 
 ```R
 devtools::install_github("lazappi/mcriPalettes")
 ```
 
-## Usage
+# Usage
 
 ```{r, palettes_dummy}
 library("mcriPalettes")
@@ -34,7 +35,9 @@ library("mcriPalettes")
 names(mcri.palettes)
 ```
 
-### MCRI
+# Palettes
+
+## MCRI
 
 ```{r, MCRI, fig.height = 3}
 library("ggplot2")
