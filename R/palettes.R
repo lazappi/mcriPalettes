@@ -4,7 +4,27 @@
 #'
 #' @export
 mcri.palettes <- list(
-    MCRI = c("#EC008C", "#00ADEF", "#8DC63F", "#00B7C6", "#F47920", "#7A52C7")
+    themes = c("#EC008C", "#00ADEF", "#8DC63F", "#00B7C6", "#F47920",
+               "#7A52C7"),
+    themesMid = c("#F499C2", "#6BCFF6", "#C4DF9B", "#92D6DE", "#FAB783",
+                  "#B09ECB"),
+    themesLite = c("#F9CCDF", "#B9E5FA", "#DFEDCB", "#C8E8ED", "#FDD8BB",
+                   "#D3CAE3"),
+    themesPaired = c("#EC008C", "#F499C2", "#00ADEF", "#6BCFF6", "#8DC63F",
+                     "#C4DF9B", "#00B7C6", "#92D6DE", "#F47920", "#FAB783",
+                     "#7A52C7", "#B09ECB"),
+    themesTripled = c("#EC008C", "#F499C2", "#F9CCDF", "#00ADEF", "#6BCFF6",
+                      "#B9E5FA", "#8DC63F", "#C4DF9B", "#DFEDCB", "#00B7C6",
+                      "#92D6DE", "#C8E8ED", "#F47920", "#FAB783", "#FDD8BB",
+                      "#7A52C7", "#B09ECB", "#D3CAE3"),
+    blues = c("#00A5D2", "#0053A1", "#092F5E"),
+    bluesMid = c("#6FCEE7", "#78A7D7", "#717BAB"),
+    bluesLite = c("#BAE4F2", "#B7CDE8", "#ACB1D0"),
+    bluesPaired = c("#00A5D2", "#6FCEE7", "#0053A1", "#78A7D7", "#092F5E",
+                    "#717BAB"),
+    bluesTripled = c("#00A5D2", "#6FCEE7", "#BAE4F2", "#0053A1", "#78A7D7",
+                     "#B7CDE8", "#092F5E", "#717BAB", "#ACB1D0"),
+    logo = c("#092F5E", "#0053A1", "#00A5D2", "#EC008C")
 )
 
 #' A MCRI palette generator

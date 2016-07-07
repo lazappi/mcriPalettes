@@ -1,9 +1,8 @@
 Package: mcriPalettes
 Type: Package
 Title: MCRI Colour Palettes
-Version: 0.1.0
+Version: 0.2.0
 Author: Luke Zappia
-Maintainer: Luke Zappia
 Description: Colour palettes based on the MCRI branding
 License:
 LazyData: TRUE

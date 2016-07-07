@@ -26,26 +26,94 @@ palette](https://github.com/karthik/wesanderson)
 devtools::install_github("lazappi/mcriPalettes")
 ```
 
-# Usage
+# Palettes
 
 ```{r, palettes_dummy}
 library("mcriPalettes")
 
 # See all palettes
-names(mcri.palettes)
-```
+pal.names <- names(mcri.palettes)
+pal.names
 
-# Palettes
-
-## MCRI
-
-```{r, MCRI, fig.height = 3}
 library("ggplot2")
 
-mcriPalette("MCRI")
+gg <- ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + 
+      geom_point(size = 3)
+```
 
-ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + 
-  geom_point(size = 3) + 
-  scale_color_manual(values = mcriPalette("MCRI")) + 
-  theme_gray()
+## Themes
+
+```{r, themes, fig.height = 3}
+mcriPalette("themes")
+gg + scale_color_manual(values = mcriPalette("themes"))
+```
+
+## Themes - Mid
+
+```{r, themes-mid, fig.height = 3}
+mcriPalette("themesMid")
+gg + scale_color_manual(values = mcriPalette("themesMid"))
+```
+
+## Themes - Lite
+
+```{r, themes-lite, fig.height = 3}
+mcriPalette("themesLite")
+gg + scale_color_manual(values = mcriPalette("themesLite"))
+```
+
+## Themes - Paired
+
+```{r, themes-paired, fig.height = 3}
+mcriPalette("themesPaired")
+gg + scale_color_manual(values = mcriPalette("themesPaired"))
+```
+
+## Themes - Tripled
+
+```{r, themes-tripled, fig.height = 3}
+mcriPalette("themesTripled")
+gg + scale_color_manual(values = mcriPalette("themesTripled"))
+```
+
+## Blues
+
+```{r, blues, fig.height = 3}
+mcriPalette("blues")
+gg + scale_color_manual(values = mcriPalette("blues"))
+```
+
+## Blues - Mid
+
+```{r, blues-mid, fig.height = 3}
+mcriPalette("bluesMid")
+gg + scale_color_manual(values = mcriPalette("bluesMid"))
+```
+
+## Blues - Lite
+
+```{r, blues-lite, fig.height = 3}
+mcriPalette("bluesLite")
+gg + scale_color_manual(values = mcriPalette("bluesLite"))
+```
+
+## Blues - Paired
+
+```{r, blues-paired, fig.height = 3}
+mcriPalette("bluesPaired")
+gg + scale_color_manual(values = mcriPalette("bluesPaired"))
+```
+
+## Blues - Tripled
+
+```{r, blues-tripled, fig.height = 3}
+mcriPalette("bluesTripled")
+gg + scale_color_manual(values = mcriPalette("bluesTripled"))
+```
+
+## Logo
+
+```{r, logo, fig.height = 3}
+mcriPalette("logo")
+gg + scale_color_manual(values = mcriPalette("logo"))
 ```
