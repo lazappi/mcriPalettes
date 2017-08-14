@@ -4,8 +4,21 @@
 #'
 #' @export
 mcri.palettes <- list(
-    themes = c("#EC008C", "#00ADEF", "#8DC63F", "#00B7C6", "#F47920",
-               "#7A52C7"),
+    symbol = c("#56C7DA",  # Blue
+               "#DA1A32",  # Red
+               "#FFCE34",  # Yellow
+               "#82C341",  # Lime
+               "#F68D39",  # Orange
+               "#007A3D",  # Green
+               "#A4219B",  # Purple
+               "#008385"), # Teal
+    greys = c("#D1D3D3", "#A0A1A2", "#58585a"),
+    themes = c("#EC008C",  # Pink
+               "#00ADEF",  # Blue
+               "#8DC63F",  # Green
+               "#00B7C6",  # Teal
+               "#F47920",  # Orange
+               "#7A52C7"), # Purple
     themesMid = c("#F499C2", "#6BCFF6", "#C4DF9B", "#92D6DE", "#FAB783",
                   "#B09ECB"),
     themesLite = c("#F9CCDF", "#B9E5FA", "#DFEDCB", "#C8E8ED", "#FDD8BB",
@@ -38,16 +51,19 @@ mcri.palettes <- list(
 #'   to automatically interpolate between colours.
 #' @return A vector of colours.
 #'
-#' @export
 #' @keywords colours, colors
+#'
 #' @examples
-#' mcriPalette("MCRI")
+#' mcriPalette("symbol")
 #'
 #' # If you need more colours than normally found in a palette, you
 #' # can use a continuous palette to interpolate between existing
 #' # colours
-#' pal <- mcriPalette(21, name = "MCRI", type = "continuous")
+#' pal <- mcriPalette(21, name = "symbol", type = "continuous")
 #' image(volcano, col = pal)
+#'
+#' @export
+#' @importFrom grDevices colorRampPalette
 mcriPalette <- function(name, n, type = c("discrete", "continuous")) {
     type <- match.arg(type)
 
@@ -67,10 +83,13 @@ mcriPalette <- function(name, n, type = c("discrete", "continuous")) {
                   continuous = colorRampPalette(pal)(n),
                   discrete = pal[1:n]
     )
+
     structure(out, class = "palette", name = name)
 }
 
 #' @export
+#' @importFrom grDevices rgb
+#' @importFrom graphics image par rect text
 print.palette <- function(x, ...) {
     n <- length(x)
     old <- par(mar = c(0.5, 0.5, 0.5, 0.5))

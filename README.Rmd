@@ -41,6 +41,22 @@ gg <- ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
       geom_point(size = 3)
 ```
 
+## Symbol
+
+```{r, symbol, fig.height = 3}
+mcriPalette("symbol")
+gg + scale_color_manual(values = mcriPalette("symbol"))
+```
+
+## Greys
+
+```{r, greys, fig.height = 3}
+mcriPalette("greys")
+gg + scale_color_manual(values = mcriPalette("greys"))
+```
+
+# Old palettes
+
 ## Themes
 
 ```{r, themes, fig.height = 3}

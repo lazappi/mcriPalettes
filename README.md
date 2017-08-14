@@ -24,15 +24,48 @@ library("mcriPalettes")
 # See all palettes
 pal.names <- names(mcri.palettes)
 pal.names
-##  [1] "themes"        "themesMid"     "themesLite"    "themesPaired" 
-##  [5] "themesTripled" "blues"         "bluesMid"      "bluesLite"    
-##  [9] "bluesPaired"   "bluesTripled"  "logo"
+##  [1] "symbol"        "greys"         "themes"        "themesMid"    
+##  [5] "themesLite"    "themesPaired"  "themesTripled" "blues"        
+##  [9] "bluesMid"      "bluesLite"     "bluesPaired"   "bluesTripled" 
+## [13] "logo"
 
 library("ggplot2")
 
 gg <- ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + 
       geom_point(size = 3)
 ```
+
+## Symbol
+
+
+```r
+mcriPalette("symbol")
+```
+
+![](figure/symbol-1.png)<!-- -->
+
+```r
+gg + scale_color_manual(values = mcriPalette("symbol"))
+```
+
+![](figure/symbol-2.png)<!-- -->
+
+## Greys
+
+
+```r
+mcriPalette("greys")
+```
+
+![](figure/greys-1.png)<!-- -->
+
+```r
+gg + scale_color_manual(values = mcriPalette("greys"))
+```
+
+![](figure/greys-2.png)<!-- -->
+
+# Old palettes
 
 ## Themes
 

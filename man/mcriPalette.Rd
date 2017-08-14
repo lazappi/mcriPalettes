@@ -22,14 +22,14 @@ A vector of colours.
 These are a handful of colour palettes based on the MCRI branding.
 }
 \examples{
-mcriPalette("MCRI")
+mcriPalette("symbol")
 
 # If you need more colours than normally found in a palette, you
 # can use a continuous palette to interpolate between existing
 # colours
-pal <- mcriPalette(21, name = "MCRI", type = "continuous")
+pal <- mcriPalette(21, name = "symbol", type = "continuous")
 image(volcano, col = pal)
+
 }
 \keyword{colors}
 \keyword{colours,}
-

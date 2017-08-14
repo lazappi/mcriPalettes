@@ -4,7 +4,7 @@
 \name{mcri.palettes}
 \alias{mcri.palettes}
 \title{Complete list of MCRI palettes}
-\format{An object of class \code{list} of length 1.}
+\format{An object of class \code{list} of length 13.}
 \usage{
 mcri.palettes
 }
@@ -12,4 +12,3 @@ mcri.palettes
 Use \code{\link{mcriPalette}} to construct palettes of desired length.
 }
 \keyword{datasets}
-
